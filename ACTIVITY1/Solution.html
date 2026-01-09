@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>CSS Box Model – Detailed Practice</title>
+    <head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+        .label {
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            background: #eee;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .box {
+            color: #333;
+            font-weight: 500;
+        }
+        .box1 {
+            background-color: #bbdefb;
+            padding: 20px;
+            border: 5px solid #0d47a1;
+            margin: 20px;
+        }
+
+        .box2 {
+            background-color: #c8e6c9;
+            padding: 50px;
+            border: 5px double #38953e;
+            margin: 40px;
+        }
+        .box3 {
+            background-color: #ffccbc;
+            padding: 20px;
+            border: 5px dashed #bf360c;
+            margin: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Box Model – Visual Practice</h1>
+    <p>
+        Each box below shows how <strong>content, padding, border, and margin</strong>
+        affect layout. Open DevTools (Right-click → Inspect) to see the box model diagram.
+    </p>
+
+    <!-- Box 1 -->
+    <div class="label">Box 1: Padding 20px | Border 5px Solid | Margin 20px</div>
+    <div class="box box1">
+        <strong>Box 1 Content</strong><br>
+        Standard padding and margin. Solid border.
+    </div>
+
+    <!-- Box 2 -->
+    <div class="label">Box 2: Padding 50px | Border 8px Double | Margin 40px</div>
+    <div class="box box2">
+        <strong>Box 2 Content</strong><br>
+        Increased padding pushes content inside.<br>
+        Double border style used.
+    </div>
+
+    <!-- Box 3 -->
+    <div class="label">Box 3: Padding 30px 60px | Border 5px Dashed | Margin 50px</div>
+    <div class="box box3">
+        <strong>Box 3 Content</strong><br>
+        Different horizontal vs vertical padding.<br>
+        Dashed border style with large margin.
+    </div>
+    <hr>
+    <h2>Key Takeaways</h2>
+    <ul>
+        <li><strong>Padding</strong> increases space inside the box</li>
+        <li><strong>Border</strong> surrounds content + padding</li>
+        <li><strong>Margin</strong> controls spacing between elements</li>
+        <li>Total size = content + padding + border (margin is outside)</li>
+    </ul>
+</body>
+</html>
