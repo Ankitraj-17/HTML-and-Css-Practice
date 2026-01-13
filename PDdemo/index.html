@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankitraj Jha | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            position: relative;
+            background-image: url('images/banner_bg.jpg'); /* Need to ensure this exists or use a color fallback */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #34495e; /* Fallback */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .hero h2 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            color: #ecf0f1;
+            font-size: 1.2rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Ankitraj Jha</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Heading Section -->
+        <section>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Exploring the world of technology through Code and Creativity.</p>
+        </section>
+
+        <!-- Banner + Welcome Section -->
+        <section class="hero">
+            <div class="overlay">
+                <article class="hero-content">
+                    <h2>Hi, I am <strong>Ankitraj Jha</strong></h2>
+                    <p>An 18-year-old <mark>BTech CSE Student (2025-2029)</mark> passionate about software development and problem-solving.</p>
+                    <a href="contact.html" class="btn">Get in Touch</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Feature List -->
+        <section>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><span>&#10003;</span> Web Technologies: HTML, CSS, JavaScript</li>
+                <li><span>&#10003;</span> Programming: C++, Python</li>
+                <li><span>&#10003;</span> Tools: Git, GitHub</li>
+            </ul>
+        </section>
+
+        <!-- 3-Column Layout -->
+        <section>
+            <h3>My Interests</h3>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Web Development</h4>
+                    <p>Building responsive websites and web applications.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Software Engineering</h4>
+                    <p>Designing and developing efficient software solutions.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Technology Innovation</h4>
+                    <p>Exploring new technologies and creative problem solving.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ankitraj Jha. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+</body>
+</html>

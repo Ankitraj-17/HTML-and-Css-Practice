@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ankitraj Jha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-company {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .team-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd; /* Placeholder color */
+        }
+
+        .team-info {
+            padding: 15px;
+        }
+
+        blockquote {
+            background: #f1f1f1;
+            padding: 20px;
+            border-left: 5px solid var(--accent-color);
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .timeline ul {
+            border-left: 2px solid var(--primary-color);
+            padding-left: 20px;
+            margin-left: 20px;
+        }
+
+        .timeline li {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline li::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            position: absolute;
+            left: -27px;
+            top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ankitraj Jha</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-company">
+            <h1>About Me</h1>
+            <p>I'm a passionate Computer Science student with a keen interest in software development, web technologies, and problem-solving. I enjoy learning new technologies and building projects that make a difference.</p>
+        </section>
+
+        <!-- Vision / Quote -->
+        <blockquote>
+            "Technology is best when it brings people together and solves real-world problems. My vision is to create accessible and efficient digital solutions."
+        </blockquote>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ccc;">
+
+        <!-- Team / Profile Section -->
+        <section>
+            <h2>My Profile</h2>
+            <div class="team-container">
+                <figure class="team-card">
+
+                    <figcaption class="team-info">
+                        <h3>Ankitraj Jha</h3>
+                        <p>BTech CSE Student</p>
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- Timeline / History -->
+        <section class="timeline">
+            <h2>Education Timeline</h2>
+            <ul>
+                <li>
+                    <strong>2025 - 2029</strong>
+                    <p>B.Tech in Computer Science Engineering</p>
+                </li>
+                <li>
+                    <strong>2025</strong>
+                    <p>Completed High School</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ankitraj Jha. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
