@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations Explorer</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            color: #fff;
+            
+            background: url('https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        aside {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Warm sunset/travel gradient */
+            background: linear-gradient(120deg, rgba(255, 100, 0, 0.3), rgba(0, 100, 255, 0.3));
+            opacity: 0.4;
+            transition: opacity 0.5s;
+        }
+
+        .card:hover::after {
+            opacity: 0.7;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px; /* Enforce consistent height for images */
+            object-fit: cover;
+            display: block;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card p {
+            padding: 10px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Animated gradient background overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 80, 0, 0.1), rgba(0, 80, 200, 0.1));
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Travel Destinations Explorer</h1>
+        <p>Explore the world's most breathtaking destinations!</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Destinations</a>
+        <a href="#">Guides</a>
+        <a href="#">Tips</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <aside>
+            <h3>Travel Filters</h3>
+            <ul>
+                <li><input type="checkbox"> Beaches</li>
+                <li><input type="checkbox"> Mountains</li>
+                <li><input type="checkbox"> Cities</li>
+                <li><input type="checkbox"> Heritage</li>
+            </ul>
+            <h4>Layout Insights:</h4>
+            <ul>
+                <li><strong>Grid Layout:</strong> Main area split into Sidebar (1fr) and Content (3fr).</li>
+                <li><strong>Responsive Cards:</strong> Gallery uses <code>auto-fit</code> and <code>minmax</code>.</li>
+                <li><strong>Visuals:</strong> Hover effects and gradients enhance the travel feel.</li>
+            </ul>
+        </aside>
+
+        <section class="gallery">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg" alt="Paris">
+                <p>Paris: City of Lights</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg" alt="Bali">
+                <p>Bali: Tropical Paradise</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg" alt="Ladakh">
+                <p>Ladakh: High Passes</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg" alt="Tokyo">
+                <p>Tokyo: Neon Future</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/532263/pexels-photo-532263.jpeg" alt="Rome">
+                <p>Rome: Eternal City</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg" alt="Santorini">
+                <p>Santorini: Blue Domes</p>
+            </div>
+        </section>
+
+        <!-- Second Gallery Row for Visual Balance -->
+        <section class="gallery">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg" alt="Machu Picchu">
+                <p>Machu Picchu: Inca Ruins</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg" alt="New York">
+                <p>New York: Concrete Jungle</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg" alt="Venice">
+                <p>Venice: Floating City</p>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.pexels.com/photos/96420/pexels-photo-96420.jpeg" alt="Maldives">
+                <p>Maldives: Ocean Bliss</p>
+            </div>
+        
+        </section>
+
+        <aside>
+             <h4>Top Picks</h4>
+            <section class="gallery">
+                 <div class="card">
+                     <img src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg" alt="Solo Travel">
+                     <p>Solo Adventures</p>
+                 </div>
+                 <div class="card">
+                     <img src="https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg" alt="Cruise">
+                     <p>Luxury Cruises</p>
+                 </div>
+                
+                 <div class="card">
+                     <img src="https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg" alt="Safari">
+                     <p>African Safari</p>
+                 </div>
+                 <div class="card">
+                     <img src="https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg" alt="Northern Lights">
+                     <p>Northern Lights</p>
+                 </div>
+                 <div class="card">
+                     <img src="https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg" alt="Desert">
+                     <p>Great Pyramids</p>
+                 </div>
+                 <div class="card">
+                     <img src="https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg" alt="Ocean">
+                     <p>Great Barrier Reef</p>
+                 </div>
+                 <div class="card">
+                     <img src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg" alt="Petra">
+                     <p>Petra, Jordan</p>
+                 </div>
+                 <div class="card">
+                     <img src="https://images.pexels.com/photos/63553/pexels-photo-63553.jpeg" alt="Canyon">
+                     <p>Grand Canyon</p>
+                 </div>
+                 <div class="card">
+                     <img src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg" alt="Taj Mahal">
+                     <p>Taj Mahal</p>
+                 </div>
+            </section>
+        </aside>
+    
+    </main>
+
+    <footer>
+        <p>© 2026 Global Wanderer — Exploring the World with CSS Grid!</p>
+    </footer>
+
+</body>
+
+</html>
