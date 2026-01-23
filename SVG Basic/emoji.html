@@ -1,0 +1,29 @@
+<!-- Emoji Face	Draw a face using one big circle and small circles for eyes, line for mouth	circle, line	Use relative positioning -->
+ <html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            svg {
+                background:linear-gradient(rgb(240, 100, 12), rgb(249, 245, 137));
+            }
+            .face:hover {
+                fill: rgb(195, 189, 25);
+                
+            }
+        </style>
+
+    </head>
+    <body>
+        <svg width="100%" height="100%" style="border:1px solid black ">
+            <circle class="face" cx="750" cy="400" r="150" fill="yellow" stroke="black" stroke-width="4"/>
+            <circle cx="690" cy="350" r="20" fill="black"/>
+            <circle cx="810" cy="350" r="20" fill="black"/>
+            <line x1="700" y1="450" x2="800" y2="450" stroke="black" stroke-width="5" />
+        </svg>
+    </body>
