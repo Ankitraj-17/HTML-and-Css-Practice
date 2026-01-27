@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive & Offline Experiment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="unique-header">
+    <h1>Responsive Web & Data</h1>
+  </header>
+
+  <div class="main-container">
+    
+    <div class="box">
+      <h2>FORM DATA</h2>
+      <p>Enter your name below:</p>
+      <input type="text" id="name" placeholder="Your Name">
+      <button onclick="saveData()">Save Name</button>
+      <p id="output"></p>
+    </div>
+
+    <div class="box">
+      <h2> VISIT TRACKER</h2>
+      <p>Total Visits: <span id="visits">0</span></p>
+      <p>Last Visit: <span id="lastVisit"></span></p>
+    </div>
+
+    <div class="box full-width">
+      <h2>My Observations</h2>
+      <ul>
+        <li><strong>Viewport:</strong> Needed for mobile scaling.</li>
+        <li><strong>Breakpoints:</strong> 600px and 900px change the layout.</li>
+        <li><strong>Offline:</strong> Data stays even without internet.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Made by Ankitraj Jha</p>
+  </footer>
+
+<script>
+  function saveData() {
+    var nameInput = document.getElementById("name").value;
+    if(nameInput) {
+      localStorage.setItem("myUserName", nameInput);
+      document.getElementById("output").innerText = "Saved: " + nameInput;
+    }
+  }
+
+  var savedName = localStorage.getItem("myUserName");
+  if(savedName) {
+    document.getElementById("name").value = savedName;
+    document.getElementById("output").innerText = "Welcome back, " + savedName;
+  }
+
+  var visits = localStorage.getItem("visitCount");
+  if(!visits) {
+    visits = 0;
+  }
+  visits = Number(visits) + 1;
+  localStorage.setItem("visitCount", visits);
+  document.getElementById("visits").innerText = visits;
+
+  var now = new Date();
+  localStorage.setItem("lastTime", now.toLocaleString());
+  document.getElementById("lastVisit").innerText = now.toLocaleString();
+</script>
+
+</body>
+</html>

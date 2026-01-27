@@ -1,0 +1,140 @@
+/* Modern Professional Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #444;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+/* Header Design */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c3e50; /* Dark Blue-Grey */
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-bottom: 5px solid #3498db; /* Blue Accent */
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Container Layout */
+.main-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr;
+}
+
+/* Card Design */
+.box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-left: 6px solid #3498db; /* Matching Accent */
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Subtle Lift Effect */
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Form Styling */
+input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Stats Text */
+#visits, #lastVisit {
+    font-weight: bold;
+    color: #e74c3c; /* Red Accent for numbers */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* Tablet (600px - 900px) */
+@media (min-width: 600px) {
+    .main-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .full-width {
+        grid-column: span 2;
+    }
+    
+    body {
+        background-color: #eef2f3; /* Soft Blue-Grey */
+    }
+}
+
+/* Desktop (900px+) */
+@media (min-width: 900px) {
+    .main-container {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 Columns */
+    }
+    
+    .full-width {
+        grid-column: auto;
+    }
+
+    body {
+        background-color: #dfe6e9; /* Slightly darker cool grey */
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+}
