@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show My Location</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="circles-background"></div>
+
+    <div class="card">
+        <h2> Geolocation Finder</h2>
+        <button onclick="getLocation()">Show My Location</button>
+        <div id="loc">Click the button to find your coordinates</div>
+    </div>
+
+    <script>
+        // Background animation
+        function updateBackground() {
+            var bg = document.querySelector('.circles-background');
+            bg.style.setProperty('--p1', Math.random() * 100 + 'px ' + Math.random() * 100 + 'px');
+            bg.style.setProperty('--p2', Math.random() * 100 + 'px ' + Math.random() * 100 + 'px');
+            bg.style.setProperty('--p3', Math.random() * 100 + 'px ' + Math.random() * 100 + 'px');
+            bg.style.setProperty('--op', '1');
+        }
+        updateBackground();
+        setInterval(updateBackground, 2000);
+
+        // Geolocation
+        function getLocation() {
+            if (navigator.geolocation) {
+                document.getElementById('loc').innerHTML = 'Getting location...';
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById('loc').innerHTML = 'Geolocation not supported';
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById('loc').innerHTML = 
+                'Latitude: ' + position.coords.latitude + '<br>' +
+                'Longitude: ' + position.coords.longitude;
+        }
+
+        function showError() {
+            document.getElementById('loc').innerHTML = 'Unable to get location';
+        }
+    </script>
+</body>
+</html>
