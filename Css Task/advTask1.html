@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2ecc71;
+      --text-color: #2c3e50;
+    }
+    h1 {
+      color: var(--primary-color);
+    }
+    p {
+      color: var(--text-color);
+    }
+    button {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Multiple Theme Colors</h1>
+  <p>This paragraph uses --text-color</p>
+  <button onclick="changePrimary()">Change Primary</button>
+  <button onclick="changeSecondary()">Change Secondary</button>
+  <button onclick="changeText()">Change Text</button>
+  <script>
+    function changePrimary() {
+      document.documentElement.style.setProperty('--primary-color', '#e74c3c');
+    }
+    function changeSecondary() {
+      document.documentElement.style.setProperty('--secondary-color', '#9b59b6');
+    }
+    function changeText() {
+      document.documentElement.style.setProperty('--text-color', '#1abc9c');
+    }
+  </script>
+</body>
+</html>

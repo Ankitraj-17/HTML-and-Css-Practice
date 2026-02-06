@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --main-color: purple;
+      --bg-color: #f4f4f4;
+    }
+    body {
+      background-color: var(--bg-color);
+    }
+    p {
+      color: var(--main-color);
+    }
+    button {
+      padding: 10px 20px;
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <p>This text uses color from :root</p>
+ <script>
+    function changeColor() {
+      document.documentElement.style.setProperty('--main-color', 'blue');
+    }
+ </script>
+ <button onclick="changeColor()">Change Color</button>
+</body>
+</html>
 

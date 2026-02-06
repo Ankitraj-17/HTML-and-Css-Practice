@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --bg-color: lightblue;
+    }
+    body {
+      background-color: var(--bg-color);
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <p>Background color comes from :root</p>
+  <button onclick="toggleBg()">Toggle Background</button>
+  <script>
+    let light = true;
+    function toggleBg() {
+      light = !light;
+      document.documentElement.style.setProperty('--bg-color', light ? 'lightblue' : '#2c3e50');
+    }
+  </script>
+</body>
+</html>

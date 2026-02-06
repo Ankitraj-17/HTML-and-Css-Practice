@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --card-bg: #f0f0f0;
+      --card-padding: 20px;
+      --card-radius: 10px;
+    }
+    .card {
+      background-color: var(--card-bg);
+      padding: var(--card-padding);
+      border-radius: var(--card-radius);
+      margin: 10px;
+      width: 200px;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">Card 1 - Same variables</div>
+  <div class="card">Card 2 - Same variables</div>
+  <button onclick="changeCards()">Change Both Cards</button>
+  <script>
+    let changed = false;
+    function changeCards() {
+      changed = !changed;
+      document.documentElement.style.setProperty('--card-bg', changed ? '#3498db' : '#f0f0f0');
+    }
+  </script>
+</body>
+</html>

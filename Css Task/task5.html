@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --bg-color: white;
+      --text-color: black;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <p>Light theme using :root</p>
+  <button onclick="toggleTheme()">Toggle Theme</button>
+  <script>
+    let dark = false;
+    function toggleTheme() {
+      dark = !dark;
+      document.documentElement.style.setProperty('--bg-color', dark ? '#1a1a2e' : 'white');
+      document.documentElement.style.setProperty('--text-color', dark ? 'white' : 'black');
+    }
+  </script>
+</body>
+</html>

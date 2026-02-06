@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --card-bg: #e8f4f8;
+    }
+    .card {
+      background-color: var(--card-bg);
+      padding: 15px;
+      width: 200px;
+      border-radius: 8px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">This is a card</div>
+  <button onclick="toggleCard()">Toggle Card Color</button>
+  <script>
+    let light = true;
+    function toggleCard() {
+      light = !light;
+      document.documentElement.style.setProperty('--card-bg', light ? '#e8f4f8' : '#34495e');
+    }
+  </script>
+</body>
+</html>
