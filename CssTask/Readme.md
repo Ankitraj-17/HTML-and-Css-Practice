@@ -89,11 +89,6 @@ Each animation demonstrates core 3D animation principles like **timing, rotation
 
 ---
 
-## 13. 3D Name Animation
-**Description:** Creative animation of my name with 3D transforms.  
-**Video Preview:**  
-![Image](https://github.com/user-attachments/assets/1e4d89fd-73bb-4638-9746-06272dc22b6e)
-
 ---
 
 ## 14. Simple Car Movement
