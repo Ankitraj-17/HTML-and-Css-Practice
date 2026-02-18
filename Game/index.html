@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Start Impulse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="tv-overlay">
+        
+
+        <div class="header-strip">
+            <div class="f1-logo">F1</div>
+            <div class="live-tag">LIVE</div>
+        </div>
+
+
+        <div class="lights-container">
+
+            <div class="light-col" id="col-1"><div class="bulb"></div><div class="bulb"></div></div>
+            <div class="light-col" id="col-2"><div class="bulb"></div><div class="bulb"></div></div>
+            <div class="light-col" id="col-3"><div class="bulb"></div><div class="bulb"></div></div>
+            <div class="light-col" id="col-4"><div class="bulb"></div><div class="bulb"></div></div>
+            <div class="light-col" id="col-5"><div class="bulb"></div><div class="bulb"></div></div>
+        </div>
+
+
+        <div id="main-msg" class="message-display">TAP TO START SEQUENCE</div>
+
+
+        <div id="result-box" class="result-box hidden">
+            <div class="result-label">REACTION TIME</div>
+            <div class="result-value" id="res-time">0.000</div>
+            <div class="result-rank" id="res-rank">--</div>
+            <div class="result-best">PB: <span id="res-best">--.---</span></div>
+        </div>
+
+
+        <div id="click-layer" class="click-layer"></div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
