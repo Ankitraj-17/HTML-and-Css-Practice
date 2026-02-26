@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIA WEC // World Endurance Championship</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- QUESTION/TASK: Build a responsive navbar with dropdown menus and a search bar. -->
+    <!-- QUESTION/TASK: Use Bootstrap utilities (spacing, text alignment, colors, shadows) to enhance design. (Applied heavily throughout 'navbar', 'gap-3', 'ms-auto', 'border-dark', etc.) -->
+    <!-- Floating Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FIA WEC</a>
+            
+            <button class="btn btn-dark d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link" href="#calendar-section">CALENDAR</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">DISCOVER</a>
+                        <ul class="dropdown-menu border-4 border-dark rounded-0 shadow">
+                            <li><a class="dropdown-item fw-bold" href="#pricing">TICKETS</a></li>
+                            <li><a class="dropdown-item fw-bold" href="#gallery">CARS & TEAMS</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item fw-bold" href="#forms">VIP HOSPITALITY</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <form class="d-flex gap-0 border border-3 border-dark" role="search">
+                            <input class="form-control border-0 py-2" type="search" placeholder="Search..." style="box-shadow:none;">
+                            <button class="btn btn-dark border-0 rounded-0" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- QUESTION/TASK: Incorporate offcanvas sidebar for navigation. -->
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav">
+        <div class="offcanvas-header bg-dark text-white border-bottom border-5 border-warning">
+            <h5 class="offcanvas-title fw-black">NAVIGATION</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav gap-3 fs-4 fw-bold">
+                <li class="nav-item"><a class="nav-link" href="#carousel">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">TICKETS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">CARS & TEAMS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#forms">VIP HOSPITALITY</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- QUESTION/TASK: Implement a carousel with at least 3 slides and custom captions. -->
+    <!-- Hero Carousel -->
+    <section id="carousel" class="container-fluid px-lg-5 my-5 reveal hero-carousel">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active bg-dark"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" class="bg-dark"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" class="bg-dark"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-split">
+                        <div class="hero-content">
+                            <h4 class="fw-black text-muted mb-2">// 01_HYPERCAR</h4>
+                            <h1 class="display-3 fw-black mb-4">THE PINNACLE OF ENDURANCE</h1>
+                            <p class="fs-5 fw-bold mb-4">Witness the ultimate test of man and machine. The world's most advanced prototypes competing across the globe.</p>
+                            <div>
+                                <button class="btn btn-dark btn-lg fw-black px-5 py-3" data-bs-toggle="modal" data-bs-target="#infoModal">GET TICKETS</button>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <!-- Toyota GR010 Hybrid - Le Mans Hypercar -->
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/2024_24_Hours_of_Le_Mans_%2854093434577%29.jpg" alt="Toyota GR010 Hybrid Le Mans Hypercar">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-split">
+                        <div class="hero-content">
+                            <h4 class="fw-black text-muted mb-2">// 02_LMGT3</h4>
+                            <h1 class="display-3 fw-black mb-4">GT3 ERA BEGINS</h1>
+                            <p class="fs-5 fw-bold mb-4">The most recognizable sports cars pushed to their absolute limits. Aston Martin, Ferrari, Porsche, and more.</p>
+                            <div>
+                                <a href="#calendar-section" class="btn btn-warning btn-lg fw-black px-5 py-3 shadow hover-lift">VIEW CALENDAR</a>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <!-- Ferrari 296 GT3 racing -->
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Afcorse499p51.jpg" alt="Ferrari 499P WEC">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-split">
+                        <div class="hero-content">
+                            <h4 class="fw-black text-muted mb-2">// 03_LE MANS</h4>
+                            <h1 class="display-3 fw-black mb-4">24 HOURS OF LE MANS</h1>
+                            <p class="fs-5 fw-bold mb-4">The ultimate motorsport marathon. Day converges into night, man converges with machine over 24 grueling hours.</p>
+                            <div>
+                                <button class="btn btn-dark btn-lg fw-black px-5 py-3">RACE INFO</button>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <!-- 24 Hours of Le Mans Night Racing -->
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Le_Mans_pit_lane_at_night.jpg" alt="Le Mans at Night">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon p-4 bg-dark" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon p-4 bg-dark" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <main class="container py-5 flex-grow-1">
+
+        <!-- System Status Ticker -->
+        <div class="ticker-wrap border-top border-bottom border-dark border-3 bg-white py-2 mb-5 reveal">
+            <div class="ticker-content d-flex fw-black fs-5">
+                <span class="ticker-item px-4 border-end border-dark"><span class="text-danger">●</span> RACE CONTROL <span class="badge bg-warning text-dark align-middle ms-2">LIVE</span></span>
+                <span class="ticker-item px-4 border-end border-dark">SPA 6H: GREEN FLAG // SESSION ACTIVE</span>
+                <span class="ticker-item px-4 border-end border-dark">HYPERCAR: P1 TOYOTA #8 // GAP +2.4s</span>
+                <span class="ticker-item px-4 border-end border-dark">LMGT3: SAFETY CAR // SECTOR 2</span>
+                <span class="ticker-item px-4 border-end border-dark">LE MANS: 147 DAYS // ENTRIES OPEN</span>
+                
+                <!-- Duplicate for seamless scroll -->
+                <span class="ticker-item px-4 border-end border-dark"><span class="text-danger">●</span> RACE CONTROL <span class="badge bg-warning text-dark align-middle ms-2">LIVE</span></span>
+                <span class="ticker-item px-4 border-end border-dark">SPA 6H: GREEN FLAG // SESSION ACTIVE</span>
+                <span class="ticker-item px-4 border-end border-dark">HYPERCAR: P1 TOYOTA #8 // GAP +2.4s</span>
+                <span class="ticker-item px-4 border-end border-dark">LMGT3: SAFETY CAR // SECTOR 2</span>
+                <span class="ticker-item px-4 border-end border-dark">LE MANS: 147 DAYS // ENTRIES OPEN</span>
+            </div>
+        </div>
+
+        <!-- 2026 Race Calendar (Dropdown) -->
+        <section id="calendar-section" class="mb-5 reveal">
+            <div class="accordion" id="calendarAccordion">
+                <div class="accordion-item border-dark border-4 rounded-0 shadow-lg" style="border-radius: var(--clay-radius) !important;">
+                    <h2 class="accordion-header" id="headingCalendar">
+                        <button class="accordion-button collapsed fw-black fs-3 text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#calendarCollapse" aria-expanded="false" aria-controls="calendarCollapse" style="border-radius: var(--clay-radius) !important;">
+                            VIEW 2026 FULL RACE CALENDAR
+                        </button>
+                    </h2>
+                    <div id="calendarCollapse" class="accordion-collapse collapse" aria-labelledby="headingCalendar" data-bs-parent="#calendarAccordion">
+                        <div class="accordion-body bg-light">
+                            <h3 class="fw-black mb-4">SEASON 14</h3>
+                            <div class="row g-4 mb-2">
+                <!-- Round 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="neo-card p-4 h-100 d-flex flex-column hover-lift">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark fw-bold px-2 py-1">ROUND 01</span>
+                            <span class="fw-black text-danger fs-5">FEB 28</span>
+                        </div>
+                        <h4 class="fw-black mb-1">QATAR 1812KM</h4>
+                        <p class="text-muted fw-bold small mb-auto">LUSAIL INT. CIRCUIT</p>
+                    </div>
+                </div>
+                <!-- Round 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="neo-card p-4 h-100 d-flex flex-column hover-lift">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark fw-bold px-2 py-1">ROUND 02</span>
+                            <span class="fw-black text-danger fs-5">APR 19</span>
+                        </div>
+                        <h4 class="fw-black mb-1">6 HOURS OF IMOLA</h4>
+                        <p class="text-muted fw-bold small mb-auto">AUTODROMO IND. ENZO E DINO FERRARI</p>
+                    </div>
+                </div>
+                <!-- Round 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="neo-card p-4 h-100 d-flex flex-column hover-lift">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark fw-bold px-2 py-1">ROUND 03</span>
+                            <span class="fw-black text-danger fs-5">MAY 10</span>
+                        </div>
+                        <h4 class="fw-black mb-1">6 HOURS OF SPA</h4>
+                        <p class="text-muted fw-bold small mb-auto">SPA-FRANCORCHAMPS</p>
+                    </div>
+                </div>
+                <!-- Round 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="neo-card p-4 h-100 d-flex flex-column border-danger border-4 hover-lift highlight-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-danger text-white fw-bold px-2 py-1">ROUND 04</span>
+                            <span class="fw-black text-danger fs-5">JUN 14-15</span>
+                        </div>
+                        <h4 class="fw-black mb-1">24 HOURS OF LE MANS</h4>
+                        <p class="text-muted fw-bold small mb-auto">CIRCUIT DE LA SARTHE</p>
+                    </div>
+                </div>
+                <!-- Round 5 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="neo-card p-4 h-100 d-flex flex-column hover-lift">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark fw-bold px-2 py-1">ROUND 05</span>
+                            <span class="fw-black text-danger fs-5">JUL 13</span>
+                        </div>
+                        <h4 class="fw-black mb-1">6H SÃO PAULO</h4>
+                        <p class="text-muted fw-bold small mb-auto">INTERLAGOS</p>
+                    </div>
+                </div>
+                <!-- Round 6 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="neo-card p-4 h-100 d-flex flex-column hover-lift">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark fw-bold px-2 py-1">ROUND 06</span>
+                            <span class="fw-black text-danger fs-5">SEP 07</span>
+                        </div>
+                        <h4 class="fw-black mb-1">LONE STAR LE MANS</h4>
+                        <p class="text-muted fw-bold small mb-auto">CIRCUIT OF THE AMERICAS</p>
+                    </div>
+                </div>
+                <!-- Round 7 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="neo-card p-4 h-100 d-flex flex-column hover-lift">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark fw-bold px-2 py-1">ROUND 07</span>
+                            <span class="fw-black text-danger fs-5">SEP 28</span>
+                        </div>
+                        <h4 class="fw-black mb-1">6 HOURS OF FUJI</h4>
+                        <p class="text-muted fw-bold small mb-auto">FUJI SPEEDWAY</p>
+                    </div>
+                </div>
+                <!-- Round 8 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="neo-card p-4 h-100 d-flex flex-column hover-lift">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark fw-bold px-2 py-1">ROUND 08</span>
+                            <span class="fw-black text-danger fs-5">NOV 01</span>
+                        </div>
+                        <h4 class="fw-black mb-1">8H OF BAHRAIN</h4>
+                        <p class="text-muted fw-bold small mb-auto">BAHRAIN INT. CIRCUIT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Championship Categories -->
+        <section id="features" class="mb-5 reveal">
+            <h2 class="fw-black mb-4">CHAMPIONSHIP CLASSES</h2>
+            <div class="row g-4 py-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="feature col text-center text-lg-start">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-dark fs-1 mb-3 p-4 shadow-lg">
+                        <i class="bi bi-speedometer2"></i>
+                    </div>
+                    <h3 class="fs-2 fw-black mb-3">HYPERCAR</h3>
+                    <p class="fw-bold fs-5 text-muted">The top class featuring Le Mans Hypercars and LMDh prototypes from Toyota, Ferrari, Porsche, and Peugeot.</p>
+                </div>
+                <div class="feature col text-center text-lg-start">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-dark fs-1 mb-3 p-4 shadow-lg">
+                        <i class="bi bi-trophy"></i>
+                    </div>
+                    <h3 class="fs-2 fw-black">LMP2</h3>
+                    <p class="fw-bold fs-5 text-muted">Spec-chassis prototypes providing intense close racing and a stepping stone to the Hypercar class.</p>
+                </div>
+                <div class="feature col text-center text-lg-start">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-dark fs-1 mb-3 p-4 shadow-lg">
+                        <i class="bi bi-car-front-fill"></i>
+                    </div>
+                    <h3 class="fs-2 fw-black mb-3">LMGT3</h3>
+                    <p class="fw-bold fs-5 text-muted">Production-based GT3 cars from Ferrari, Porsche, McLaren, Aston Martin, Corvette, and BMW.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUESTION/TASK: Create a pricing table using Bootstrap cards and grid system. -->
+        <!-- Ticket Packages -->
+        <section id="pricing" class="mb-5 reveal">
+            <h2 class="fw-black mb-4">TICKET PACKAGES</h2>
+            <div class="row g-4 pt-2 align-items-stretch">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card pricing-card h-100">
+                        <div class="card-header py-3"><h3 class="m-0 fw-black">GRANDSTAND</h3></div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h1 class="fw-black display-4 mb-4">€120<span class="fs-6 fw-bold">/DAY</span></h1>
+                            <ul class="list-unstyled mb-auto fs-5 fw-bold">
+                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i> Reserved Grandstand Seat</li>
+                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i> Live Timing App Access</li>
+                                <li class="mb-2 text-muted"><i class="bi bi-x-lg text-danger me-2"></i> Pit Lane Walk</li>
+                            </ul>
+                            <button class="btn btn-outline-dark w-100 fw-black py-3 mt-4" data-bs-toggle="modal" data-bs-target="#compareModal">COMPARE PLANS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card pricing-card popular shadow-lg h-100">
+                        <div class="card-header bg-dark text-warning border-0 py-4"><h3 class="m-0 fw-black">PADDOCK PASS</h3></div>
+                        <div class="card-body p-5 d-flex flex-column">
+                            <h1 class="fw-black display-3 mb-4">€450<span class="fs-6 fw-bold">/WEEKEND</span></h1>
+                            <ul class="list-unstyled mb-auto fs-4 fw-bold">
+                                <li class="mb-3"><i class="bi bi-check-lg text-dark me-2"></i> Full Paddock Access</li>
+                                <li class="mb-3"><i class="bi bi-check-lg text-dark me-2"></i> Pit Lane Walk</li>
+                                <li class="mb-3"><i class="bi bi-check-lg text-dark me-2"></i> Driver Autograph Zone</li>
+                            </ul>
+                            <button class="btn btn-dark w-100 fw-black py-4 mt-4 fs-5" data-bs-toggle="modal" data-bs-target="#compareModal">COMPARE PLANS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mx-auto">
+                    <div class="card pricing-card h-100">
+                        <div class="card-header py-3"><h3 class="m-0 fw-black">VIP HOSPITALITY</h3></div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h1 class="fw-black display-4 mb-4">€2,500<span class="fs-6 fw-bold">/WEEKEND</span></h1>
+                            <ul class="list-unstyled mb-auto fs-5 fw-bold">
+                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i> Hospitality Suite</li>
+                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i> Garage Tour</li>
+                                <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i> Grid Access</li>
+                            </ul>
+                            <button class="btn btn-dark w-100 fw-black py-3 mt-4" data-bs-toggle="modal" data-bs-target="#compareModal">COMPARE PLANS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <!-- QUESTION/TASK: Make a grid-based gallery that adjusts for different screen sizes. -->
+        <!-- Bootstrap Gallery Grid -->
+        <!-- Code Portfolio Gallery (enhanced with JS Masonry) -->
+        <section id="gallery" class="mb-5 py-5 reveal">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+                <h2 class="display-4 fw-black m-0">CARS & <span class="text-bg-dark px-3 mt-2 mt-md-0 d-inline-block">TEAMS</span></h2>
+                <a href="#" class="btn btn-outline-dark fw-bold border-2 rounded-0">FULL ENTRY LIST <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+
+            <!-- Masonry Grid Wrapper -->
+            <div class="row portfolio-grid" data-masonry='{"percentPosition": true }'>
+                
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="gallery-img card overflow-hidden border-dark border-2 rounded-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/2024_24_Hours_of_Le_Mans_%2854093434577%29.jpg" class="img-fluid object-fit-cover w-100" alt="Toyota GR010 Hybrid">
+                        <div class="img-caption bg-white text-dark p-3 border-top border-dark border-2 d-flex flex-column">
+                            <div class="mb-2"><span class="badge bg-danger text-white border border-dark rounded-0 fw-bold">HYPERCAR</span></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-black text-uppercase text-truncate pe-2">TOYOTA GR010 #8</span>
+                                <i class="bi bi-arrow-right-short fs-4 lh-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="gallery-img card overflow-hidden border-dark border-2 rounded-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Afcorse499p51.jpg" class="img-fluid object-fit-cover w-100" alt="Ferrari 499P">
+                        <div class="img-caption bg-white text-dark p-3 border-top border-dark border-2 d-flex flex-column">
+                            <div class="mb-2"><span class="badge bg-danger text-white border border-dark rounded-0 fw-bold">HYPERCAR</span></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-black text-uppercase text-truncate pe-2">FERRARI 499P #50</span>
+                                <i class="bi bi-arrow-right-short fs-4 lh-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="gallery-img card overflow-hidden border-dark border-2 rounded-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Porsche-963-lmdh-1.jpg" class="img-fluid object-fit-cover w-100" alt="Porsche 963 LMDh">
+                        <div class="img-caption bg-white text-dark p-3 border-top border-dark border-2 d-flex flex-column">
+                            <div class="mb-2"><span class="badge bg-warning text-dark border border-dark rounded-0 fw-bold">LMDh</span></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-black text-uppercase text-truncate pe-2">PORSCHE 963 #6</span>
+                                <i class="bi bi-arrow-right-short fs-4 lh-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="gallery-img card overflow-hidden border-dark border-2 rounded-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Le_Mans_pit_lane_at_night.jpg" class="img-fluid object-fit-cover w-100" alt="Le Mans Pit Lane at Night">
+                        <div class="img-caption bg-white text-dark p-3 border-top border-dark border-2 d-flex flex-column">
+                            <div class="mb-2"><span class="badge bg-info text-dark border border-dark rounded-0 fw-bold">PIT LANE</span></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-black text-uppercase text-truncate pe-2">NIGHT PIT STOP</span>
+                                <i class="bi bi-arrow-right-short fs-4 lh-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="gallery-img card overflow-hidden border-dark border-2 rounded-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/CorvetteRacing4Roval.jpg" class="img-fluid object-fit-cover w-100" alt="Corvette C8.R Racing">
+                        <div class="img-caption bg-white text-dark p-3 border-top border-dark border-2 d-flex flex-column">
+                            <div class="mb-2"><span class="badge bg-success text-dark border border-dark rounded-0 fw-bold">LMGT3</span></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-black text-uppercase text-truncate pe-2">CORVETTE Z06 #33</span>
+                                <i class="bi bi-arrow-right-short fs-4 lh-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="gallery-img card overflow-hidden border-dark border-2 rounded-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Circuit_de_Spa-Francorchamps%2C_April_22%2C_2018_SkySat_%28cropped%29.jpg" class="img-fluid object-fit-cover w-100" alt="Spa-Francorchamps Circuit">
+                        <div class="img-caption bg-white text-dark p-3 border-top border-dark border-2 d-flex flex-column">
+                            <div class="mb-2"><span class="badge bg-primary text-white border border-dark rounded-0 fw-bold">CIRCUIT</span></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-black text-uppercase text-truncate pe-2">SPA-FRANCORCHAMPS</span>
+                                <i class="bi bi-arrow-right-short fs-4 lh-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="gallery-img card overflow-hidden border-dark border-2 rounded-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/2022_BMW_M4_GT3.jpg" class="img-fluid object-fit-cover w-100" alt="BMW M4 GT3">
+                        <div class="img-caption bg-white text-dark p-3 border-top border-dark border-2 d-flex flex-column">
+                            <div class="mb-2"><span class="badge bg-success text-dark border border-dark rounded-0 fw-bold">LMGT3</span></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-black text-uppercase text-truncate pe-2">BMW M4 GT3 #46</span>
+                                <i class="bi bi-arrow-right-short fs-4 lh-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="gallery-img card overflow-hidden border-dark border-2 rounded-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/24H_Le_Mans_2025_winning_car_with_the_chequered_flag.jpg" class="img-fluid object-fit-cover w-100" alt="Le Mans Checkered Flag">
+                        <div class="img-caption bg-white text-dark p-3 border-top border-dark border-2 d-flex flex-column">
+                            <div class="mb-2"><span class="badge bg-secondary text-white border border-dark rounded-0 fw-bold">FINISH</span></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-black text-uppercase text-truncate pe-2">CHECKERED FLAG</span>
+                                <i class="bi bi-arrow-right-short fs-4 lh-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUESTION/TASK: Implement alerts for different message types (success, warning, danger, info). -->
+        <!-- QUESTION/TASK: Create badges and buttons with various colors and sizes. (Badges inside the 'SYSTEM HEALTH' text and cards, Buttons in the Intake form below). -->
+        <!-- Bootstrap Alerts -->
+        <!-- Bootstrap Badges (in alerts section) -->
+        <!-- Alerts Section -->
+        <section id="system-health" class="mb-5 reveal">
+            <h2 class="fw-black mb-4 align-items-center d-flex">RACE CONTROL <span class="badge bg-dark ms-3">4 FLAGS</span></h2>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="alert bg-white fw-bold border-dark border-3 rounded-0 shadow-sm d-flex align-items-center hover-lift" role="alert">
+                        <i class="bi bi-flag-fill text-success fs-4 me-3"></i>
+                        <div>
+                            <div class="fw-black">GREEN FLAG</div>
+                            <span class="small">Track clear. Racing conditions active across all sectors.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert bg-white fw-bold border-dark border-3 rounded-0 shadow-sm d-flex align-items-center hover-lift" role="alert">
+                        <i class="bi bi-shield-fill text-info fs-4 me-3"></i>
+                        <div>
+                            <div class="fw-black">VIRTUAL SAFETY CAR</div>
+                            <span class="small">Speed delta enforced. All cars maintaining minimum lap time.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert bg-white fw-bold border-dark border-3 rounded-0 shadow-sm d-flex align-items-center hover-lift" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill text-warning fs-4 me-3"></i>
+                        <div>
+                            <div class="fw-black">LOCAL YELLOW — SECTOR 2</div>
+                            <span class="small">Debris on track at Turn 8. No overtaking in affected zone.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert bg-white fw-bold border-dark border-3 rounded-0 shadow-sm d-flex align-items-center hover-lift" role="alert">
+                        <i class="bi bi-x-octagon-fill text-danger fs-4 me-3"></i>
+                        <div>
+                            <div class="fw-black">RED FLAG — SESSION STOPPED</div>
+                            <span class="small">Heavy rain conditions. All cars return to pit lane immediately.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- QUESTION/TASK: Apply forms with validation, including text inputs, checkboxes, radio buttons, and submit button. -->
+        <!-- Intake Form -->
+        <section id="forms" class="mb-5 reveal">
+            <div class="neo-box p-5 bg-white border-5">
+                <h2 class="fw-black mb-4">FAN REGISTRATION</h2>
+                <form class="needs-validation" novalidate>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label class="form-label fw-black small">FULL_NAME</label>
+                            <input type="text" class="form-control form-control-lg fw-bold" placeholder="EX: ANKIT RAJJ" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-black small">EMAIL_ADDRESS</label>
+                            <input type="email" class="form-control form-control-lg fw-bold" placeholder="fan@wec.com" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-black small d-block mb-3">PREFERRED CLASS</label>
+                            <div class="d-flex gap-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="p" id="r1" required checked>
+                                    <label class="form-check-label fw-bold" for="r1">HYPERCAR</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="p" id="r2" required>
+                                    <label class="form-check-label fw-bold" for="r2">LMGT3</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check py-2">
+                                <input class="form-check-input" type="checkbox" id="c1" required>
+                                <label class="form-check-label fw-bold" for="c1">I ACCEPT THE FIA WEC FAN CHARTER & PRIVACY POLICY</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-dark btn-lg fw-black w-100 py-4 shadow-lg fs-4" type="submit">REGISTER NOW</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- QUESTION/TASK: Add tooltips and popovers to provide extra information. -->
+        <!-- Tooltips & Popovers -->
+
+        <section class="mb-5 reveal">
+            <h2 class="fw-black mb-4">RACE DATA</h2>
+            <div class="d-flex gap-3 flex-wrap">
+                <button type="button" class="btn btn-warning fw-black px-4 py-3" data-bs-toggle="tooltip" title="Next Race: 6 Hours of Spa — May 10, 2026">NEXT_RACE_INFO</button>
+                <button type="button" class="btn btn-dark fw-black px-4 py-3" data-bs-toggle="popover" title="Live Telemetry" data-bs-content="Real-time sector times and GPS tracking for all classes.">LIVE_TELEMETRY</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Compare Plans Modal -->
+    <div class="modal flip fade" id="compareModal" tabindex="-1" aria-labelledby="compareModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content p-2">
+                <div class="modal-header border-0 pb-0">
+                    <h2 class="modal-title fw-black fs-2" id="compareModalLabel">PACKAGE COMPARISON</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-3">
+                    <div class="table-responsive">
+                        <table class="table table-bordered border-dark table-hover text-center align-middle fw-bold mb-0">
+                            <thead class="table-dark text-white border-dark">
+                                <tr>
+                                    <th scope="col" class="py-3 text-start">FEATURES</th>
+                                    <th scope="col" class="py-3">GRANDSTAND</th>
+                                    <th scope="col" class="py-3 text-warning">PADDOCK PASS</th>
+                                    <th scope="col" class="py-3 text-danger">VIP HOSPITALITY</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-start">Reserved Seating</td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                    <td><i class="bi bi-x-lg text-danger fs-5"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start">Live Timing App</td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start">Full Paddock Access</td>
+                                    <td><i class="bi bi-x-lg text-danger fs-5"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start">Pit Lane Walk</td>
+                                    <td><i class="bi bi-x-lg text-danger fs-5"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start">Driver Autographs</td>
+                                    <td><i class="bi bi-x-lg text-danger fs-5"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="text-start">Hospitality Suite</td>
+                                    <td><i class="bi bi-x-lg text-danger fs-5"></i></td>
+                                    <td><i class="bi bi-x-lg text-danger fs-5"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="text-start">Garage Tour</td>
+                                    <td><i class="bi bi-x-lg text-danger fs-5"></i></td>
+                                    <td><i class="bi bi-x-lg text-danger fs-5"></i></td>
+                                    <td><i class="bi bi-check-lg text-success fs-4"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-start py-4">PRICE</th>
+                                    <td class="py-4 fs-5">€120 / DAY</td>
+                                    <td class="py-4 fs-5">€450 / WKND</td>
+                                    <td class="py-4 fs-5">€2,500 / WKND</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-outline-dark fw-bold px-4" data-bs-dismiss="modal">CLOSE</button>
+                    <button type="button" class="btn btn-danger fw-black px-4 shadow">PROCEED TO TICKETING</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUESTION/TASK: Use modals for displaying additional content on button click. (Triggered by the 'HIRE CORE' button in the Carousel). -->
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0">
+                    <h2 class="modal-title fw-black">FIA WEC 2026</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body fs-5 fw-bold">
+                    The FIA World Endurance Championship features the world's greatest manufacturers competing across 8 rounds, culminating in the legendary 24 Hours of Le Mans.
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-dark fw-bold px-4" data-bs-dismiss="modal">UNDERSTOOD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- QUESTION/TASK: Design a sticky footer layout using utilities. (Uses 'mt-auto' on the footer and 'd-flex min-vh-100 flex-column' on the <body> tag). -->
+    <!-- Sticky Footer -->
+    <footer class="mt-auto">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="mb-3 mb-md-0 fs-3 fw-black">FIA WEC // 2026</div>
+            <div class="d-flex gap-4 fs-5 fw-bold">
+                <a href="#calendar-section" class="text-white text-decoration-none border-bottom border-warning footer-link">CALENDAR</a>
+                <a href="#" class="text-white text-decoration-none border-bottom border-warning">STANDINGS</a>
+                <a href="#" class="text-white text-decoration-none border-bottom border-warning">FIA.COM</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vendor Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
